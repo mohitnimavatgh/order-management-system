@@ -1,32 +1,66 @@
-# order-management-system
+````md
+# Order Management System
 
-## Completed Task
+Mini order management system built with Laravel 12 and Nuxt. This project includes basic order creation, listing, status updates, validation, and testing.
 
-- Add, list, and update orders
-- API create with Laravel
-- Frontend Using Nuxt 
-- Form validation using Vuelidate and backend validation
-- Tailwind CSS for clean UI
-- PHP Unit tests for backend functionality
+---
 
-## Step to Run
+## Features
 
-- For backend 
+- Create, list, and update orders
+- REST API using Laravel
+- Nuxt 3 frontend using Vuelidate for validation
+- Tailwind CSS
+- Backend & frontend validation
+- PHPUnit tests for API functionality
 
-cd order-managment-backend
+---
+
+## Tech Stack
+
+- Backend: Laravel 12, MySQL, PHPUnit
+- Frontend: Nuxt 3, Vuelidate, Tailwind CSS
+
+---
+
+## How to Run the Project
+
+### Backend Laravel
+
+```bash
+cd order-management-backend
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan serve
+````
 
-- For Frontend
+The Laravel API will be available at: `http://127.0.0.1:8000/api/orders`
 
-cd order-managment-frontend
+### Frontend Nuxt 
+
+```bash
+cd order-management-frontend
 npm install
 npm run dev
+```
 
-## Run Unit Test
+The frontend will run at: `http://localhost:3000`
 
-cd order-managment-backend
+---
+
+## Run Backend Unit Tests
+
+```bash
+cd order-management-backend
 php artisan test
+```
+
+---
+
+## Known Issue
+
+In the test task, it was mentioned to use the `PATCH` method to update the order status. However, I encountered a CORS error specifically with `PATCH`, while other API methods worked fine. To resolve this, I used the `PUT` method for updating the status. 
+
+---
